@@ -13,4 +13,9 @@ public class TestController {
     public String getString(@PathVariable String name) {
         return "Running from Jenkins via Docker Image "+name;
     }
+
+    @GetMapping("/test/{name}")
+    public String getTest(@PathVariable String name) {
+        return "Running from Test "+name;
+    }
 }
